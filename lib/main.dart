@@ -1,4 +1,5 @@
-import 'package:chkobba/game_card.dart';
+import 'package:chkobba/game_card_hand.dart';
+import 'package:chkobba/game_card_hand_model.dart';
 import 'package:chkobba/game_card_model.dart';
 import 'package:flutter/material.dart';
 
@@ -40,13 +41,24 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: GameCard(
-          model: GameCardModel(
-            icon: '♥️',
-            color: Colors.red,
-            value: 9,
-            isFacedown: false,
-          ),
+        child: GameCardHand(
+          model: GameCardHandModel(cards: [
+            GameCardModel(
+              logo: CardLogoEnum.heart,
+              value: 9,
+              isFacedown: false,
+            ),
+            GameCardModel(
+              logo: CardLogoEnum.diamond,
+              value: 9,
+              isFacedown: false,
+            ),
+            GameCardModel(
+              logo: CardLogoEnum.club,
+              value: 9,
+              isFacedown: false,
+            ),
+          ]),
         ),
       ),
     );
