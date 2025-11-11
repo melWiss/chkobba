@@ -1,19 +1,19 @@
-import 'dart:math' as math;
-
+import 'package:chkobba/angle_to_radian_mixin.dart';
 import 'package:chkobba/game_card_model.dart';
 import 'package:chkobba/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
-class GameCard extends StatelessWidget {
-  const GameCard({
+class GameCard extends StatelessWidget with AngleToRadianMixin {
+   GameCard({
     required this.model,
-    this.angle = 0,
+    double angle = 0,
     this.cardSize = 300,
     super.key,
-  });
+  }) {
+    this.angle = angle;
+  }
 
   final GameCardModel model;
-  final double angle;
   final double cardSize;
 
   @override
@@ -63,6 +63,4 @@ class GameCard extends StatelessWidget {
   double get width => cardSize * .7;
 
   double get height => cardSize;
-
-  double get radian => angle * (math.pi / 180);
 }
