@@ -49,13 +49,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     isFacedown: true,
                   ),
                   GameCardModel(
-                    logo: CardLogoEnum.diamond,
+                    logo: CardLogoEnum.spade,
                     value: 9,
                     isFacedown: true,
                   ),
                   GameCardModel(
                     logo: CardLogoEnum.club,
                     value: 9,
+                    isFacedown: true,
+                  ),
+                  GameCardModel(
+                    logo: CardLogoEnum.diamond,
+                    value: 7,
                     isFacedown: true,
                   ),
                 ],
@@ -71,13 +76,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     isFacedown: true,
                   ),
                   GameCardModel(
-                    logo: CardLogoEnum.diamond,
+                    logo: CardLogoEnum.spade,
                     value: 9,
                     isFacedown: true,
                   ),
                   GameCardModel(
                     logo: CardLogoEnum.club,
                     value: 9,
+                    isFacedown: true,
+                  ),
+                  GameCardModel(
+                    logo: CardLogoEnum.diamond,
+                    value: 7,
                     isFacedown: true,
                   ),
                 ],
@@ -93,13 +103,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     isFacedown: true,
                   ),
                   GameCardModel(
-                    logo: CardLogoEnum.diamond,
+                    logo: CardLogoEnum.spade,
                     value: 9,
                     isFacedown: true,
                   ),
                   GameCardModel(
                     logo: CardLogoEnum.club,
                     value: 9,
+                    isFacedown: true,
+                  ),
+                  GameCardModel(
+                    logo: CardLogoEnum.diamond,
+                    value: 7,
                     isFacedown: true,
                   ),
                 ],
@@ -110,18 +125,23 @@ class _MyHomePageState extends State<MyHomePage> {
               model: GameCardHandModel(
                 cards: [
                   GameCardModel(
-                    logo: CardLogoEnum.heart,
+                    logo: CardLogoEnum.spade,
                     value: 9,
                     isFacedown: false,
                   ),
                   GameCardModel(
-                    logo: CardLogoEnum.diamond,
+                    logo: CardLogoEnum.heart,
                     value: 9,
                     isFacedown: false,
                   ),
                   GameCardModel(
                     logo: CardLogoEnum.club,
                     value: 9,
+                    isFacedown: false,
+                  ),
+                  GameCardModel(
+                    logo: CardLogoEnum.diamond,
+                    value: 7,
                     isFacedown: false,
                   ),
                 ],

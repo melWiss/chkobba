@@ -15,6 +15,16 @@ class GameCardHand extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<GameCard> cardsWidgets = [];
+    for (var i = 0; i < model.cards.length; i++) {
+      cardsWidgets.add(
+        GameCard(
+          model: model.cards[i],
+          angle: -cardAngleFactor+cardAngleFactor*i/(.5*(model.cards.length - 1)),
+          cardSize: 150,
+        ),
+      );
+    }
     return Align(
       alignment: handPosition.alignment,
       child: Transform.translate(
@@ -23,30 +33,14 @@ class GameCardHand extends StatelessWidget {
           angle: handPosition.radian,
           child: Row(
             mainAxisSize: MainAxisSize.min,
-            children: [
-              // TODO: this should become dynamic in the future, this only works with
-              // three cards.
-              GameCard(
-                model: model.cards[0],
-                angle: -30,
-                cardSize: 150,
-              ),
-              GameCard(
-                model: model.cards[1],
-                angle: 0,
-                cardSize: 150,
-              ),
-              GameCard(
-                model: model.cards[2],
-                angle: 30,
-                cardSize: 150,
-              ),
-            ],
+            children: cardsWidgets,
           ),
         ),
       ),
     );
   }
+
+  double get cardAngleFactor => model.cards.length * 10;
 }
 
 enum HandPositionEnum {
